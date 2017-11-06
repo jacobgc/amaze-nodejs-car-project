@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function (req, res) {
-    res.render('index', {title: 'First Fleet Management -- Home'});
+    res.render('about', {title: 'First Fleet Management -- About'});
 });
 
 module.exports = router;

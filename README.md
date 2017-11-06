@@ -1,4 +1,4 @@
-# Amaze Project -- Black Sea Fleet Management
+# Amaze Project -- First Fleet Management
 
 ## Back end
 * NodeJS
