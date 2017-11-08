@@ -16,7 +16,7 @@ self.addEventListener('install', function (event) {
                 './',
                 '/assets/css/bootstrap.min.css',
                 '/assets/css/main.css',
-                '/assets/js/dist/bundle.js',
+                '/assets/js/dist/bundle.js'
             ]);
         })
     );
