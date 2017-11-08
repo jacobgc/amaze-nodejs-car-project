@@ -15,14 +15,8 @@ self.addEventListener('install', function (event) {
             return cache.addAll([
                 './',
                 '/assets/css/bootstrap.min.css',
-                '/assets/js/jquery.min.js',
-                '/assets/js/popper.min.js',
-                '/assets/js/bootstrap.min.js',
-                '/assets/js/font-awesome/brands.min.js',
-                '/assets/js/font-awesome/light.min.js',
-                '/assets/js/font-awesome/regular.min.js',
-                '/assets/js/font-awesome/solid.min.js',
-                '/assets/js/font-awesome/fontawesome.min.js'
+                '/assets/css/main.css',
+                '/assets/js/dist/bundle.js',
             ]);
         })
     );

@@ -5,5 +5,7 @@
 * RethinkDB
 
 ## Front end
-* React
-* ** More to come **
+* Bootstrap
+* FontAwesome 5
+* Popper.js
+* JQuery :(
