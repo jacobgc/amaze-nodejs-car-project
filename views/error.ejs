@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <%- include('./templates/head') %>
+</head>
+<body>
+<%- include('./templates/navbar') %>
+<div class="container">
+    <div class="jumbotron">
+        <h1><%= message %></h1>
+        <h2><%= error.status %></h2>
+        <pre><%= error.stack || 'Whoops, seems like that page doesn\'t exist :( Why not try heading back a page?' %></pre>
+        <a class="btn btn-primary" href="javascript:history.back()" role="button"><- Back</a>
+
+    </div>
+
+</div>
+
+<%- include('./templates/footer') %>
+</body>
+</html>
