@@ -6,9 +6,11 @@
 <script src="assets/js/font-awesome/regular.min.js"></script>
 <script src="assets/js/font-awesome/solid.min.js"></script>
 
-
+<% if(env != 'development'){%>
 <script>
     navigator.serviceWorker.register('sw.js', {
         scope: './'
     });
 </script>
+<%}%>
+
