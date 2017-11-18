@@ -27,6 +27,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Add some locals for allowing ejs templates the environment
 app.use(function (req,res,next){
     res.locals.env = req.app.get('env');
     next();
