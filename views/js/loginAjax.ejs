@@ -1,0 +1,85 @@
+<script>
+$('#loginButton').click(function(){
+    grecaptcha.execute();
+    console.log('---------- Starting AJAX request to login');
+    $.ajax({
+        url: "http://localhost:3000/api/auth/login",
+        type: "POST",
+        contentType: "application/x-www-form-urlencoded",
+        data: {'username':$('#email').val(),'password':$('#password').val()},
+
+        complete: function() {
+            console.log('----- Done');
+            console.log('---------- Finished AJAX request to login')
+        },
+
+        success: function() {
+            console.log('----- AJAX request to login success');
+//              Process Login Here
+        },
+
+        error: function(err) {
+            console.log('----- AJAX request to login error: ' + JSON.stringify(err));
+            if(err.status === 403){
+                console.log('----- 403 Access Denied (Username / Password incorrect)');
+                $('#loginError').append('<div class="alert alert-danger alert-dismissible show fade" role="alert" id="loginAlert">\n' +
+                    '                '+err.responseText+'\n' +
+                    '                <button type="button" class="close" data-dismiss="alert" aria-label="Close">\n' +
+                    '                    <span aria-hidden="true">&times;</span>\n' +
+                    '                </button>\n' +
+                    '            </div>')
+                setTimeout(
+                    function()
+                    {
+                        $('#loginAlert').alert('close');
+                    }, 5000);
+            }
+        },
+    });
+});
+
+$('#signupButton').click(function(){
+    grecaptcha.execute();
+    console.log('---------- Starting AJAX request to signup');
+    $.ajax({
+        url: "http://localhost:3000/api/auth/register",
+        type: "POST",
+        contentType: "application/x-www-form-urlencoded",
+        data: {'username':$('#registrationEmail').val(), 'password':$('#registrationPassword').val(), 'passwordConfirmation':$('#passwordConfirmation').val()},
+
+        complete: function() {
+            console.log('----- Done');
+            console.log('---------- Finished AJAX request to signup')
+        },
+
+        success: function() {
+            console.log('----- AJAX request to login success');
+//              Process registration Here
+        },
+
+        error: function(err) {
+            console.log('----- AJAX request to registration error: ' + JSON.stringify(err));
+            if(err.status === 403){
+                console.log('----- 403 Access Denied (System rejected registration attempt)');
+                $('#registrationError').append('<div class="alert alert-danger alert-dismissible show fade" role="alert" id="registrationAlert">\n' +
+                    '                '+err.responseText+'\n' +
+                    '                <button type="button" class="close" data-dismiss="alert" aria-label="Close">\n' +
+                    '                    <span aria-hidden="true">&times;</span>\n' +
+                    '                </button>\n' +
+                    '            </div>')
+                setTimeout(
+                    function()
+                    {
+                        $('#registrationAlert').alert('close');
+                    }, 5000);
+            }
+        },
+    });
+});
+</script>
+
+<script>
+    $('input').blur(function(event) {
+        event.target.checkValidity();
+    });
+</script>

@@ -2,6 +2,9 @@
   <dictionary name="j">
     <words>
       <w>jumbotron</w>
+      <w>navbar</w>
+      <w>onload</w>
+      <w>recaptcha</w>
     </words>
   </dictionary>
 </component>

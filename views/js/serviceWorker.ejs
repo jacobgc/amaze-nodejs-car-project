@@ -1,0 +1,7 @@
+<% if(env != 'development'){%>
+<script>
+    navigator.serviceWorker.register('sw.js', {
+        scope: './'
+    });
+</script>
+<%}%>

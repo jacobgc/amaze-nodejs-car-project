@@ -6,6 +6,7 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "bcrypt": "^1.0.3",
     "body-parser": "~1.18.2",
     "compression": "^1.7.1",
     "cookie-parser": "~1.4.3",
@@ -15,7 +16,10 @@
     "express": "~4.15.5",
     "helmet": "^3.9.0",
     "morgan": "~1.9.0",
+    "performance-now": "^2.1.0",
     "postcss-loader": "^2.0.8",
-    "serve-favicon": "~2.4.5"
+    "rethinkdbdash": "^2.3.31",
+    "serve-favicon": "~2.4.5",
+    "validator": "^9.1.2"
   }
 }

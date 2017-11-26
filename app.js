@@ -10,6 +10,9 @@ const helmet = require('helmet');
 
 // Routes
 const index = require('./routes/index');
+const login = require('./routes/api/auth/login');
+const register = require('./routes/api/auth/registration');
+
 
 
 const app = express();
@@ -34,7 +37,8 @@ app.use(function (req,res,next){
 });
 
 app.use('/', index);
-
+app.use('/api/auth/login', login);
+app.use('/api/auth/register', register);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
