@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eb7a278d-4ed9-4968-afcf-7b48fee4f4a2" name="Default" comment="Many changes&#10;&#10;Created db.js which is a helper file to connect to the right database">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLinters/jshint.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/auth/db.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/js/jquery/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/api/auth/login.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/api/auth/registration.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/js/loginAjax.ejs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/js/serviceWorker.ejs" />
+    <list default="true" id="eb7a278d-4ed9-4968-afcf-7b48fee4f4a2" name="Default" comment="Updated the folder structure of layouts and implemented front end Google ReCaptcha&#10;&#10;*Still needs backend implementation*">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/js/authAjax.ejs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/modals/signin.ejs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/modals/signup.ejs" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/qs/.editorconfig" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/qs/.eslintignore" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/qs/.eslintrc" afterPath="" />
@@ -28,15 +23,9 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/qs/test/parse.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/qs/test/stringify.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/qs/test/utils.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/js/entry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/js/jquery/jquery.slim.min.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/amaze-project-ffm.iml" afterPath="$PROJECT_DIR$/.idea/amaze-project-ffm.iml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/js/loginAjax.ejs" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/j.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/j.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/webResources.xml" afterPath="$PROJECT_DIR$/.idea/webResources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.yarn-integrity" afterPath="$PROJECT_DIR$/node_modules/.yarn-integrity" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/qs/.eslintrc" afterPath="$PROJECT_DIR$/node_modules/qs/.eslintrc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/qs/CHANGELOG.md" afterPath="$PROJECT_DIR$/node_modules/qs/CHANGELOG.md" />
@@ -48,10 +37,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/qs/test/.eslintrc" afterPath="$PROJECT_DIR$/node_modules/qs/test/.eslintrc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/qs/test/parse.js" afterPath="$PROJECT_DIR$/node_modules/qs/test/parse.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/qs/test/stringify.js" afterPath="$PROJECT_DIR$/node_modules/qs/test/stringify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/templates/footer.ejs" afterPath="$PROJECT_DIR$/views/templates/footer.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/templates/head.ejs" afterPath="$PROJECT_DIR$/views/templates/head.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/templates/navbar.ejs" afterPath="$PROJECT_DIR$/views/templates/navbar.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yarn.lock" afterPath="$PROJECT_DIR$/yarn.lock" />
     </list>
     <ignored path="$USER_HOME$/.tmp/" />
     <ignored path="$USER_HOME$/temp/" />
@@ -65,21 +53,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="head.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/templates/head.ejs">
+      <file leaf-file-name="authAjax.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/js/authAjax.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state relative-caret-position="195">
+              <caret line="69" column="11" lean-forward="false" selection-start-line="69" selection-start-column="11" selection-end-line="69" selection-end-column="11" />
+              <folding>
+                <marker date="1511831050556" expanded="true" signature="921:928" ph="×" />
+                <marker date="1511831050556" expanded="true" signature="2724:2731" ph="×" />
+                <marker date="1511831050556" expanded="true" signature="3991:3998" ph="×" />
+                <marker date="1511831050556" expanded="true" signature="5943:5950" ph="×" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navbar.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/templates/navbar.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="11" column="43" lean-forward="false" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="navbar.ejs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/templates/navbar.ejs">
+      <file leaf-file-name="signup.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/modals/signup.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+            <state relative-caret-position="612">
+              <caret line="34" column="39" lean-forward="false" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/templates/footer.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="head.ejs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/templates/head.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="317">
+              <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -93,6 +116,7 @@
       <find>images/</find>
       <find>bodypar</find>
       <find>console</find>
+      <find>alert</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -119,11 +143,16 @@
         <option value="$PROJECT_DIR$/auth/db.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/routes/api/auth/registration.js" />
-        <option value="$PROJECT_DIR$/views/templates/footer.ejs" />
-        <option value="$PROJECT_DIR$/views/js/loginAjax.ejs" />
-        <option value="$PROJECT_DIR$/views/templates/head.ejs" />
         <option value="$PROJECT_DIR$/views/js/recaptcha.ejs" />
         <option value="$PROJECT_DIR$/views/templates/navbar.ejs" />
+        <option value="$PROJECT_DIR$/views/js/loginAjax.ejs" />
+        <option value="$PROJECT_DIR$/views/modals/google.ejs" />
+        <option value="$PROJECT_DIR$/views/modals/googleRecaptcha.ejs" />
+        <option value="$PROJECT_DIR$/views/modals/signup.ejs" />
+        <option value="$PROJECT_DIR$/views/modals/signin.ejs" />
+        <option value="$PROJECT_DIR$/views/templates/footer.ejs" />
+        <option value="$PROJECT_DIR$/views/js/authAjax.ejs" />
+        <option value="$PROJECT_DIR$/views/templates/head.ejs" />
       </list>
     </option>
   </component>
@@ -171,6 +200,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -193,6 +223,12 @@
               <item name="Amaze Project -- First Fleet Management" type="b2602c69:ProjectViewProjectNode" />
               <item name="amaze-project-ffm" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="modals" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Amaze Project -- First Fleet Management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="amaze-project-ffm" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -200,7 +236,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -209,7 +244,7 @@
     <property name="javascript.nodejs.core.library.configured.version" value="9.2.0" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="Settings.JavaScript.Linters.JSHint" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="node.js.path.for.package.jscs" value="project" />
@@ -264,20 +299,30 @@
       <workItem from="1511524207769" duration="10334000" />
       <workItem from="1511538708664" duration="2652000" />
       <workItem from="1511615876039" duration="6322000" />
-      <workItem from="1511661636012" duration="6466000" />
+      <workItem from="1511661636012" duration="6618000" />
+      <workItem from="1511739423289" duration="7680000" />
+      <workItem from="1511828807424" duration="2249000" />
     </task>
+    <task id="LOCAL-00001" summary="Many changes&#10;&#10;Created db.js which is a helper file to connect to the right database&#10;&#10;Updated jquery&#10;&#10;Added login and registration API endpoints (login not functional)&#10;&#10;Created better structure for added javascript (/views/js/)&#10;&#10;Updated content through out the index page&#10;&#10;Added some required packages (bcrypt, rethinkdbdash and validator)">
+      <created>1511668236073</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1511668236073</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37806000" />
+    <option name="totallyTimeSpent" value="47887000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1061" extended-state="0" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -290,6 +335,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -299,6 +345,11 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Many changes&#10;&#10;Created db.js which is a helper file to connect to the right database&#10;&#10;Updated jquery&#10;&#10;Added login and registration API endpoints (login not functional)&#10;&#10;Created better structure for added javascript (/views/js/)&#10;&#10;Updated content through out the index page&#10;&#10;Added some required packages (bcrypt, rethinkdbdash and validator)" />
+    <MESSAGE value="Updated the folder structure of layouts and implemented front end Google ReCaptcha&#10;&#10;*Still needs backend implementation*" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated the folder structure of layouts and implemented front end Google ReCaptcha&#10;&#10;*Still needs backend implementation*" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="1" />
@@ -306,11 +357,18 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/views/modals/signin.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="35" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/api/auth/registration.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -318,7 +376,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -326,7 +383,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -334,7 +390,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="23" column="38" lean-forward="false" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -356,11 +411,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/js/loginAjax.ejs">
+    <entry file="file://$PROJECT_DIR$/views/js/authAjax.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1314">
           <caret line="73" column="29" lean-forward="true" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
@@ -476,13 +530,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="57" column="30" lean-forward="true" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/auth/dbSetup.js" />
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -502,7 +549,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -510,7 +556,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -518,26 +563,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="792">
           <caret line="44" column="86" lean-forward="true" selection-start-line="44" selection-start-column="86" selection-end-line="44" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/templates/footer.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/js/loginAjax.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
-          <folding>
-            <marker date="1511666562137" expanded="true" signature="1275:1282" ph="×" />
-            <marker date="1511666562137" expanded="true" signature="2984:2991" ph="×" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -545,38 +570,75 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/js/recaptcha.ejs" />
+    <entry file="file://$PROJECT_DIR$/views/templates/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/views/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/modals/signin.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="35" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/js/recaptcha.ejs">
+    <entry file="file://$PROJECT_DIR$/views/modals/googleRecaptcha.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="18">
+          <caret line="1" column="41" lean-forward="false" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/modals/signup.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="34" column="39" lean-forward="false" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/templates/footer.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/js/authAjax.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="69" column="11" lean-forward="false" selection-start-line="69" selection-start-column="11" selection-end-line="69" selection-end-column="11" />
+          <folding>
+            <marker date="1511831050556" expanded="true" signature="921:928" ph="×" />
+            <marker date="1511831050556" expanded="true" signature="2724:2731" ph="×" />
+            <marker date="1511831050556" expanded="true" signature="3991:3998" ph="×" />
+            <marker date="1511831050556" expanded="true" signature="5943:5950" ph="×" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/templates/navbar.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="43" lean-forward="false" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/templates/head.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/templates/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/templates/navbar.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        <state relative-caret-position="317">
+          <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
           <folding />
         </state>
       </provider>

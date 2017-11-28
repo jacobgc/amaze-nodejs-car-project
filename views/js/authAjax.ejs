@@ -1,0 +1,127 @@
+<script>
+    function resetRecaptcha() {
+        grecaptcha.reset(widgetId1);
+        grecaptcha.reset(widgetId2);
+    }
+
+    $('#loginForm').on('submit', function (e) { // When the login form is submitted, ensure the Google ReCapthca form is submitted
+        e.preventDefault(); // Stop the form from submitting as we are managing the post request
+
+        let recaptcha = grecaptcha.getResponse(widgetId1);
+        if (recaptcha === "") {
+            console.log('----- 403 Access Denied (Username / Password incorrect)');
+            $('#loginError').append('<div class="alert alert-danger alert-dismissible show fade" role="alert" id="loginAlert">\n' +
+                '                ' + 'Error: Please submit Google ReCaptcha' + '\n' +
+                '                <button type="button" class="close" data-dismiss="alert" aria-label="Close">\n' +
+                '                    <span aria-hidden="true">&times;</span>\n' +
+                '                </button>\n' +
+                '            </div>')
+            setTimeout(
+                function () {
+                    $('#loginAlert').alert('close');
+                }, 5000);
+        } else {
+            console.log('---------- Starting AJAX request to login');
+            $.ajax({
+                url: "http://localhost:3000/api/auth/login",
+                type: "POST",
+                contentType: "application/x-www-form-urlencoded",
+                data: {
+                    'username': $('#email').val(),
+                    'password': $('#password').val(),
+                    'gcaptcha': grecaptcha.getResponse(widgetId1)
+                },
+
+                complete: function () {
+                    console.log('----- Done');
+                    console.log('---------- Finished AJAX request to login')
+                    resetRecaptcha();
+                },
+
+                success: function () {
+                    console.log('----- AJAX request to login success');
+//              Process Login Here
+                },
+
+                error: function (err) {
+                    console.log('----- AJAX request to login error: ' + JSON.stringify(err));
+                    if (err.status === 403) {
+                        console.log('----- 403 Access Denied (Username / Password incorrect)');
+                        $('#loginError').append('<div class="alert alert-danger alert-dismissible show fade" role="alert" id="loginAlert">\n' +
+                            '                ' + err.responseText + '\n' +
+                            '                <button type="button" class="close" data-dismiss="alert" aria-label="Close">\n' +
+                            '                    <span aria-hidden="true">&times;</span>\n' +
+                            '                </button>\n' +
+                            '            </div>')
+                        setTimeout(
+                            function () {
+                                $('#loginAlert').alert('close');
+                            }, 5000);
+                    }
+                },
+            });
+        }
+    });
+
+    $('#signupForm').on('submit', function (e) { // When the registration form is submitted, ensure the Google ReCapthca form is submitted
+        e.preventDefault(); // Stop the form from submitting as we are managing the post request
+
+
+        let recaptcha = grecaptcha.getResponse(widgetId2);
+        if (recaptcha === "") { // If the recaptcha responce is blank from not submitting
+            console.log('----- 403 Access Denied (Username / Password incorrect)');
+            $('#registrationError').append('<div class="alert alert-danger alert-dismissible show fade" role="alert" id="registrationAlert">\n' +
+                '                ' + 'Error: Please submit Google ReCaptcha' + '\n' +
+                '                <button type="button" class="close" data-dismiss="alert" aria-label="Close">\n' +
+                '                    <span aria-hidden="true">&times;</span>\n' +
+                '                </button>\n' +
+                '            </div>')
+            setTimeout(
+                function () {
+                    $('#registrationAlert').alert('close');
+                }, 5000);
+        } else {
+            console.log('---------- Starting AJAX request to signup');
+            $.ajax({
+                url: "http://localhost:3000/api/auth/register",
+                type: "POST",
+                contentType: "application/x-www-form-urlencoded",
+                data: {
+                    'username': $('#registrationEmail').val(),
+                    'password': $('#registrationPassword').val(),
+                    'passwordConfirmation': $('#passwordConfirmation').val(),
+                    'gcaptcha': grecaptcha.getResponse(widgetId2)
+                },
+
+                complete: function () {
+                    console.log('----- Done');
+                    console.log('---------- Finished AJAX request to signup')
+                    resetRecaptcha();
+                },
+
+                success: function () {
+                    console.log('----- AJAX request to login success');
+//              Process registration Here
+                },
+
+                error: function (err) {
+                    console.log('----- AJAX request to registration error: ' + JSON.stringify(err));
+                    if (err.status === 403) {
+                        console.log('----- 403 Access Denied (System rejected registration attempt)');
+                        $('#registrationError').append('<div class="alert alert-danger alert-dismissible show fade" role="alert" id="registrationAlert">\n' +
+                            '                ' + err.responseText + '\n' +
+                            '                <button type="button" class="close" data-dismiss="alert" aria-label="Close">\n' +
+                            '                    <span aria-hidden="true">&times;</span>\n' +
+                            '                </button>\n' +
+                            '            </div>')
+                        setTimeout(
+                            function () {
+                                $('#registrationAlert').alert('close');
+                            }, 5000);
+                    }
+                }
+            })
+        }
+    })
+
+</script>

@@ -1,0 +1,43 @@
+<!-- Signup Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="Signup Modal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div id='registrationError'></div>
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Signup</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="signupForm">
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input required type="email" class="form-control" id="registrationEmail"
+                               aria-describedby="emailHelp"
+                               placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.
+                        </small>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input required type="password" class="form-control" id="registrationPassword"
+                               placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Confirm Password</label>
+                        <input required type="password" class="form-control" id="passwordConfirmation"
+                               placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                    </div>
+                    <div id="recaptcha2"></div>
+                    <br>
+                    <input type="submit" class="btn btn-primary float-right" value="Signup">
+                    <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Close</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
