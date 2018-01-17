@@ -14,7 +14,6 @@ const login = require('./routes/api/auth/login');
 const register = require('./routes/api/auth/registration');
 
 
-
 const app = express();
 app.use(compression()); // Adds GZIP Compression
 app.use(helmet()); // Sets HTTP headers to secure express

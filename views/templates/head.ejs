@@ -23,7 +23,8 @@
 <script type="text/javascript">
     let widgetId1;
     let widgetId2;
-    let onloadCallback = function () {
+    let onloadCallback;
+    onloadCallback = function () {
         widgetId1 = grecaptcha.render('recaptcha1', {
             'sitekey': '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
         });

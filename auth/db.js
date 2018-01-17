@@ -1,3 +1,3 @@
-module.exports = require('rethinkdbdash')({
-        db:'ffm'
-    });
+// module.exports = require('rethinkdbdash')({
+//         db:'ffm'
+// });

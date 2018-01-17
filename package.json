@@ -20,6 +20,7 @@
     "postcss-loader": "^2.0.8",
     "rethinkdbdash": "^2.3.31",
     "serve-favicon": "~2.4.5",
+    "unix-time": "^1.0.1",
     "validator": "^9.1.2"
   }
 }

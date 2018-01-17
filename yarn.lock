@@ -1203,6 +1203,10 @@ uid-number@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/uid-number/-/uid-number-0.0.6.tgz#0ea10e8035e8eb5b8e4449f06da1c730663baa81"
 
+unix-time@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/unix-time/-/unix-time-1.0.1.tgz#50f84139bacda6a0d830b28729824eead52c1652"
+
 unpipe@1.0.0, unpipe@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/unpipe/-/unpipe-1.0.0.tgz#b2bf4ee8514aae6165b4817829d21b2ef49904ec"

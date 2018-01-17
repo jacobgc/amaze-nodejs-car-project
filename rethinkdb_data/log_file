@@ -1,0 +1,8 @@
+2017-12-27T23:14:07.811254042 0.228704s notice: Recursively removing directory /home/j/WebstormProjects/amaze-project-ffm/rethinkdb_data/tmp
+2017-12-27T23:14:07.832550907 0.250006s notice: Initializing directory /home/j/WebstormProjects/amaze-project-ffm/rethinkdb_data
+2017-12-27T23:14:07.832878934 0.250328s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/home/j/WebstormProjects/amaze-project-ffm/rethinkdb_data' did not already exist or is empty.)
+2017-12-27T23:14:07.832996184 0.250445s notice: Running rethinkdb 2.3.6 (GCC 7.2.0)...
+2017-12-27T23:14:07.854405319 0.271860s notice: Running on Linux 4.14.5-1-ARCH x86_64
+2017-12-27T23:14:07.854691024 0.272140s notice: Loading data from directory /home/j/WebstormProjects/amaze-project-ffm/rethinkdb_data
+2017-12-27T23:14:07.942109114 0.359567s info: Automatically using cache size of 491 MB
+2017-12-27T23:14:07.944114189 0.361563s error: TCP socket creation failed for port 29015: Address already in use.
